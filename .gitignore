@@ -1,2 +1,33 @@
+# Environment
 .env
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Data
 data/
+
+# dbt
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Local databases
+*.sqlite
+*.db
