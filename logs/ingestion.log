@@ -1,0 +1,94 @@
+2026-07-15 01:37:43,541 | INFO | ============================================================
+2026-07-15 01:37:43,541 | INFO | Starting MovieLens Ingestion
+2026-07-15 01:37:43,541 | INFO | ============================================================
+2026-07-15 01:37:43,541 | INFO | Loading movies.csv
+2026-07-15 01:40:05,445 | INFO | ============================================================
+2026-07-15 01:40:05,446 | INFO | Starting MovieLens Ingestion
+2026-07-15 01:40:05,446 | INFO | ============================================================
+2026-07-15 01:40:05,446 | INFO | Loading movies.csv
+2026-07-15 01:40:05,524 | ERROR | missing data for column "source_file"
+CONTEXT:  COPY raw_movies, line 1: "1,Toy Story (1995),Adventure|Animation|Children|Comedy|Fantasy"
+Traceback (most recent call last):
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/load_to_postgres.py", line 29, in main
+    loader.copy_csv(
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/postgres_loader.py", line 42, in copy_csv
+    cursor.copy_expert(
+psycopg2.errors.BadCopyFileFormat: missing data for column "source_file"
+CONTEXT:  COPY raw_movies, line 1: "1,Toy Story (1995),Adventure|Animation|Children|Comedy|Fantasy"
+
+2026-07-15 01:40:05,525 | INFO | Loading ratings.csv
+2026-07-15 01:40:07,475 | ERROR | missing data for column "source_file"
+CONTEXT:  COPY raw_ratings, line 1: "1,2,3.5,1112486027"
+Traceback (most recent call last):
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/load_to_postgres.py", line 29, in main
+    loader.copy_csv(
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/postgres_loader.py", line 42, in copy_csv
+    cursor.copy_expert(
+psycopg2.errors.BadCopyFileFormat: missing data for column "source_file"
+CONTEXT:  COPY raw_ratings, line 1: "1,2,3.5,1112486027"
+
+2026-07-15 01:40:07,475 | INFO | Loading tags.csv
+2026-07-15 01:40:07,563 | ERROR | missing data for column "source_file"
+CONTEXT:  COPY raw_tags, line 1: "18,4141,Mark Waters,1240597180"
+Traceback (most recent call last):
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/load_to_postgres.py", line 29, in main
+    loader.copy_csv(
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/postgres_loader.py", line 42, in copy_csv
+    cursor.copy_expert(
+psycopg2.errors.BadCopyFileFormat: missing data for column "source_file"
+CONTEXT:  COPY raw_tags, line 1: "18,4141,Mark Waters,1240597180"
+
+2026-07-15 01:40:07,563 | INFO | Loading links.csv
+2026-07-15 01:40:07,593 | ERROR | missing data for column "source_file"
+CONTEXT:  COPY raw_links, line 1: "1,0114709,862"
+Traceback (most recent call last):
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/load_to_postgres.py", line 29, in main
+    loader.copy_csv(
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/postgres_loader.py", line 42, in copy_csv
+    cursor.copy_expert(
+psycopg2.errors.BadCopyFileFormat: missing data for column "source_file"
+CONTEXT:  COPY raw_links, line 1: "1,0114709,862"
+
+2026-07-15 01:40:07,594 | INFO | Loading genome-tags.csv
+2026-07-15 01:40:07,616 | ERROR | missing data for column "source_file"
+CONTEXT:  COPY raw_genome_tags, line 1: "1,007"
+Traceback (most recent call last):
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/load_to_postgres.py", line 29, in main
+    loader.copy_csv(
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/postgres_loader.py", line 42, in copy_csv
+    cursor.copy_expert(
+psycopg2.errors.BadCopyFileFormat: missing data for column "source_file"
+CONTEXT:  COPY raw_genome_tags, line 1: "1,007"
+
+2026-07-15 01:40:07,616 | INFO | Loading genome-scores.csv
+2026-07-15 01:40:08,837 | ERROR | missing data for column "source_file"
+CONTEXT:  COPY raw_genome_scores, line 1: "1,1,0.025000000000000022"
+Traceback (most recent call last):
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/load_to_postgres.py", line 29, in main
+    loader.copy_csv(
+  File "/Users/shreyasinath/Documents/Projects/Netflix_content_analytics/ingestion/postgres_loader.py", line 42, in copy_csv
+    cursor.copy_expert(
+psycopg2.errors.BadCopyFileFormat: missing data for column "source_file"
+CONTEXT:  COPY raw_genome_scores, line 1: "1,1,0.025000000000000022"
+
+2026-07-15 01:40:08,837 | INFO | ============================================================
+2026-07-15 01:40:08,837 | INFO | Ingestion Complete
+2026-07-15 01:40:08,837 | INFO | ============================================================
+2026-07-15 01:53:40,474 | INFO | ============================================================
+2026-07-15 01:53:40,474 | INFO | Starting MovieLens Ingestion
+2026-07-15 01:53:40,474 | INFO | ============================================================
+2026-07-15 01:53:40,474 | INFO | Loading movies.csv
+2026-07-15 01:53:40,663 | INFO | Loaded 27,278 rows into raw.raw_movies
+2026-07-15 01:53:40,663 | INFO | Loading ratings.csv
+2026-07-15 01:54:02,340 | INFO | Loaded 20,000,263 rows into raw.raw_ratings
+2026-07-15 01:54:02,343 | INFO | Loading tags.csv
+2026-07-15 01:54:03,025 | INFO | Loaded 465,564 rows into raw.raw_tags
+2026-07-15 01:54:03,026 | INFO | Loading links.csv
+2026-07-15 01:54:03,052 | INFO | Loaded 27,278 rows into raw.raw_links
+2026-07-15 01:54:03,052 | INFO | Loading genome-tags.csv
+2026-07-15 01:54:03,068 | INFO | Loaded 1,128 rows into raw.raw_genome_tags
+2026-07-15 01:54:03,068 | INFO | Loading genome-scores.csv
+2026-07-15 01:54:09,917 | INFO | Loaded 11,709,768 rows into raw.raw_genome_scores
+2026-07-15 01:54:09,920 | INFO | ============================================================
+2026-07-15 01:54:09,920 | INFO | Ingestion Complete
+2026-07-15 01:54:09,920 | INFO | ============================================================

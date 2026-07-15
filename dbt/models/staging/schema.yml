@@ -1,0 +1,48 @@
+version: 2
+
+models:
+
+  - name: stg_movies
+    columns:
+      - name: movie_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_ratings
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+
+      - name: movie_id
+        tests:
+          - not_null
+
+      - name: rating
+        tests:
+          - not_null
+
+  - name: stg_tags
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+
+      - name: movie_id
+        tests:
+          - not_null
+
+  - name: stg_links
+    columns:
+      - name: movie_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_genome_tags
+    columns:
+      - name: tag_id
+        tests:
+          - unique
+          - not_null
