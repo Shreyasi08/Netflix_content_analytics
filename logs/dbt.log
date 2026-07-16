@@ -397,3 +397,51 @@ Runtime Error
 [0m02:22:52.916682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124cac500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1251fc7a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12527b140>]}
 [0m02:22:52.916888 [debug] [MainThread]: Flushing usage events
 [0m02:22:53.331085 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:50:25.278970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089ad310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a52c60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a52960>]}
+
+
+============================== 15:50:25.282900 | 9f6baf38-bf81-4a08-814b-44a3e8f52bcb ==============================
+[0m15:50:25.282900 [info ] [MainThread]: Running with dbt=1.11.12
+[0m15:50:25.283371 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'log_path': 'logs', 'quiet': 'False', 'use_experimental_parser': 'False', 'target_path': 'None', 'no_print': 'None', 'log_cache_events': 'False', 'printer_width': '80', 'static_parser': 'True', 'warn_error': 'None', 'partial_parse': 'True', 'debug': 'False', 'introspect': 'True', 'invocation_command': 'dbt test --select fact_ratings', 'indirect_selection': 'eager', 'use_colors': 'True', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/shreyasinath/.dbt', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'log_format': 'default', 'version_check': 'True'}
+[0m15:50:25.283814 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/shreyasinath/Documents/Projects/Netflix_content_analytics/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:50:25.291445 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 0.065722086, "process_in_blocks": "0", "process_kernel_time": 0.189321, "process_mem_max_rss": "111640576", "process_out_blocks": "0", "process_user_time": 0.856028}
+[0m15:50:25.292011 [debug] [MainThread]: Command `dbt test` failed at 15:50:25.291866 after 0.07 seconds
+[0m15:50:25.292469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089ad130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a52d20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a52d50>]}
+[0m15:50:25.292891 [debug] [MainThread]: Flushing usage events
+[0m15:50:25.704963 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:51:31.447439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047e2210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072ceed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072cec30>]}
+
+
+============================== 15:51:31.451193 | 3750af38-f3c4-4753-a3ed-a2ee054382cf ==============================
+[0m15:51:31.451193 [info ] [MainThread]: Running with dbt=1.11.12
+[0m15:51:31.451637 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/shreyasinath/.dbt', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'write_json': 'True', 'target_path': 'None', 'invocation_command': 'dbt test --select fact_ratings', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'static_parser': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'printer_width': '80', 'no_print': 'None', 'log_path': 'logs', 'use_experimental_parser': 'False', 'log_format': 'default', 'quiet': 'False', 'introspect': 'True', 'indirect_selection': 'eager', 'use_colors': 'True'}
+[0m15:51:31.452020 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/shreyasinath/Documents/Projects/Netflix_content_analytics/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:51:31.454358 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 0.06364808, "process_in_blocks": "0", "process_kernel_time": 0.171731, "process_mem_max_rss": "111411200", "process_out_blocks": "0", "process_user_time": 0.848152}
+[0m15:51:31.454713 [debug] [MainThread]: Command `dbt test` failed at 15:51:31.454636 after 0.06 seconds
+[0m15:51:31.454942 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070e0ef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072cf110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072cedb0>]}
+[0m15:51:31.455162 [debug] [MainThread]: Flushing usage events
+[0m15:51:31.823135 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:01:23.850401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b28d730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0236e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c023410>]}
+
+
+============================== 17:01:23.853974 | 250ccaad-8606-4540-a6e6-0bafa651e7c2 ==============================
+[0m17:01:23.853974 [info ] [MainThread]: Running with dbt=1.11.12
+[0m17:01:23.854407 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'partial_parse': 'True', 'use_colors': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'invocation_command': 'dbt ls --output json', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'write_json': 'True', 'debug': 'False', 'printer_width': '80', 'introspect': 'True', 'no_print': 'None', 'warn_error': 'None', 'target_path': 'None', 'profiles_dir': '/Users/shreyasinath/.dbt', 'log_path': 'logs', 'version_check': 'True', 'quiet': 'False', 'fail_fast': 'False', 'empty': 'None', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m17:01:23.854810 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/shreyasinath/Documents/Projects/Netflix_content_analytics/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:01:23.857127 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": false, "command_wall_clock_time": 0.055296626, "process_in_blocks": "0", "process_kernel_time": 0.152774, "process_mem_max_rss": "111443968", "process_out_blocks": "0", "process_user_time": 0.821071}
+[0m17:01:23.857489 [debug] [MainThread]: Command `dbt ls` failed at 17:01:23.857423 after 0.06 seconds
+[0m17:01:23.857765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0234a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c023950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c023650>]}
+[0m17:01:23.857978 [debug] [MainThread]: Flushing usage events
+[0m17:01:24.296191 [debug] [MainThread]: An error was encountered while trying to flush usage events

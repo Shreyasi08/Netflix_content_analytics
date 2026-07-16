@@ -1,7 +1,22 @@
+{{ config(
+    materialized='incremental',
+    unique_key=['user_id','movie_id','rating_timestamp']
+) }}
+
 WITH ratings AS (
 
     SELECT *
     FROM {{ ref('stg_ratings') }}
+
+    {% if is_incremental() %}
+
+        WHERE rating_timestamp >
+        (
+            SELECT MAX(rating_timestamp)
+            FROM {{ this }}
+        )
+
+    {% endif %}
 
 ),
 

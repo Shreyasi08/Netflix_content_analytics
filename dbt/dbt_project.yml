@@ -18,6 +18,7 @@ clean-targets:
   - "dbt_packages"
 
 models:
+
   netflix_analytics:
 
     staging:
@@ -27,7 +28,12 @@ models:
       +materialized: view
 
     marts:
-      +materialized: table
+
+      dimensions:
+        +materialized: table
+
+      facts:
+        +materialized: incremental
 
     reporting:
       +materialized: table

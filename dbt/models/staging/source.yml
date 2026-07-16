@@ -2,12 +2,26 @@ version: 2
 
 sources:
   - name: raw
+    description: "Raw MovieLens 25M dataset ingested from CSV files into PostgreSQL."
+
     schema: raw
 
     tables:
+
       - name: raw_movies
+        description: "Raw movie metadata."
+
       - name: raw_ratings
+        description: "Raw user movie ratings."
+
       - name: raw_tags
+        description: "User-generated movie tags."
+
       - name: raw_links
+        description: "Movie mappings to IMDb and TMDb."
+
       - name: raw_genome_scores
+        description: "Genome relevance scores."
+
       - name: raw_genome_tags
+        description: "Genome tag definitions."

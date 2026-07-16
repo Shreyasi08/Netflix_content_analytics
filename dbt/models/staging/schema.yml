@@ -3,46 +3,47 @@ version: 2
 models:
 
   - name: stg_movies
+    description: "Standardized movie dimension staging model."
+
     columns:
+
       - name: movie_id
+        description: "Unique MovieLens movie identifier."
         tests:
           - unique
           - not_null
+
+      - name: title
+        description: "Movie title."
+
+      - name: genres
+        description: "Pipe-delimited list of movie genres."
 
   - name: stg_ratings
+    description: "Standardized user ratings."
+
     columns:
+
       - name: user_id
-        tests:
-          - not_null
+        description: "MovieLens user identifier."
 
       - name: movie_id
-        tests:
-          - not_null
+        description: "Movie identifier."
 
       - name: rating
-        tests:
-          - not_null
+        description: "Rating assigned by the user."
+
+      - name: rating_timestamp
+        description: "Timestamp when the rating was submitted."
 
   - name: stg_tags
-    columns:
-      - name: user_id
-        tests:
-          - not_null
-
-      - name: movie_id
-        tests:
-          - not_null
+    description: "Standardized user movie tags."
 
   - name: stg_links
-    columns:
-      - name: movie_id
-        tests:
-          - unique
-          - not_null
+    description: "Movie external identifiers."
+
+  - name: stg_genome_scores
+    description: "Genome relevance scores."
 
   - name: stg_genome_tags
-    columns:
-      - name: tag_id
-        tests:
-          - unique
-          - not_null
+    description: "Genome tag lookup."

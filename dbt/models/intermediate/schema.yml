@@ -1,0 +1,28 @@
+version: 2
+
+models:
+
+  - name: int_movie_genres
+    description: "Explodes multi-value genres into one row per movie and genre."
+
+  - name: int_movie_statistics
+    description: "Movie-level aggregate statistics."
+
+    columns:
+      - name: movie_id
+        description: "Movie identifier."
+
+      - name: rating_count
+        description: "Number of ratings received."
+
+      - name: average_rating
+        description: "Average movie rating."
+
+      - name: first_rating_date
+        description: "Earliest rating timestamp."
+
+      - name: last_rating_date
+        description: "Latest rating timestamp."
+
+  - name: int_user_statistics
+    description: "User-level aggregate statistics."

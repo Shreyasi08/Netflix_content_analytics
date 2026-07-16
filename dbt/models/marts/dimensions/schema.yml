@@ -1,0 +1,63 @@
+version: 2
+
+models:
+
+  - name: dim_movie
+    description: "Movie dimension containing metadata and aggregated rating statistics."
+
+    columns:
+      - name: movie_key
+        description: "Surrogate key for the movie dimension."
+
+      - name: movie_id
+        description: "Original MovieLens movie identifier."
+
+      - name: title
+        description: "Movie title."
+
+      - name: genres
+        description: "Pipe-delimited list of genres assigned to the movie."
+
+      - name: rating_count
+        description: "Total number of ratings received."
+
+      - name: average_rating
+        description: "Average rating across all users."
+
+      - name: first_rating_date
+        description: "Timestamp of the first recorded rating."
+
+      - name: last_rating_date
+        description: "Timestamp of the most recent recorded rating."
+
+  - name: dim_user
+    description: "User dimension containing aggregated user rating behavior."
+
+    columns:
+      - name: user_key
+        description: "Surrogate key for the user dimension."
+
+      - name: user_id
+        description: "Original MovieLens user identifier."
+
+      - name: ratings_count
+        description: "Total number of ratings submitted by the user."
+
+      - name: average_rating_given
+        description: "Average rating assigned by the user."
+
+      - name: first_rating
+        description: "Timestamp of the user's first rating."
+
+      - name: last_rating
+        description: "Timestamp of the user's most recent rating."
+
+  - name: dim_genre
+    description: "Genre dimension."
+
+    columns:
+      - name: genre_key
+        description: "Surrogate key for the genre dimension."
+
+      - name: genre
+        description: "Movie genre."

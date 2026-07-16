@@ -1,0 +1,48 @@
+version: 2
+
+models:
+
+  - name: fact_ratings
+    description: Fact table containing all movie ratings.
+
+    columns:
+
+      - name: movie_id
+        description: Original MovieLens movie identifier.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_movie')
+                field: movie_id
+
+      - name: user_id
+        description: Original MovieLens user identifier.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_user')
+                field: user_id
+
+      - name: rating
+        description: Rating given by the user.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]
+
+      - name: rating_timestamp
+        description: Timestamp when the rating was submitted.
+        tests:
+          - not_null
+
+  - name: fact_tags
+    description: Fact table storing user-generated movie tags.
+
+  - name: fact_genome_scores
+    description: Fact table storing genome relevance scores.
+
+  - name: bridge_movie_genre
+    description: Bridge table linking movies to genres.
