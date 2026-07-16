@@ -1,0 +1,18 @@
+version: 2
+
+models:
+
+  - name: rpt_movie_popularity
+    description: Business-ready movie popularity report.
+
+  - name: rpt_genre_analysis
+    description: Genre-level rating analytics.
+
+  - name: rpt_user_activity
+    description: User activity summary.
+
+  - name: rpt_top_rated_movies
+    description: Highest rated movies with sufficient rating volume.
+
+  - name: rpt_rating_trends
+    description: Historical rating trends by year.

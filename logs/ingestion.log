@@ -92,3 +92,21 @@ CONTEXT:  COPY raw_genome_scores, line 1: "1,1,0.025000000000000022"
 2026-07-15 01:54:09,920 | INFO | ============================================================
 2026-07-15 01:54:09,920 | INFO | Ingestion Complete
 2026-07-15 01:54:09,920 | INFO | ============================================================
+2026-07-15 17:13:38,695 | INFO | ============================================================
+2026-07-15 17:13:38,696 | INFO | Starting MovieLens Ingestion
+2026-07-15 17:13:38,696 | INFO | ============================================================
+2026-07-15 17:13:38,696 | INFO | Loading movies.csv
+2026-07-15 17:13:38,853 | INFO | Loaded 27,278 rows into raw.raw_movies
+2026-07-15 17:13:38,853 | INFO | Loading ratings.csv
+2026-07-15 17:13:59,055 | INFO | Loaded 20,000,263 rows into raw.raw_ratings
+2026-07-15 17:13:59,058 | INFO | Loading tags.csv
+2026-07-15 17:14:00,972 | INFO | Loaded 465,564 rows into raw.raw_tags
+2026-07-15 17:14:00,972 | INFO | Loading links.csv
+2026-07-15 17:14:01,046 | INFO | Loaded 27,278 rows into raw.raw_links
+2026-07-15 17:14:01,046 | INFO | Loading genome-tags.csv
+2026-07-15 17:14:01,061 | INFO | Loaded 1,128 rows into raw.raw_genome_tags
+2026-07-15 17:14:01,061 | INFO | Loading genome-scores.csv
+2026-07-15 17:14:10,550 | INFO | Loaded 11,709,768 rows into raw.raw_genome_scores
+2026-07-15 17:14:10,551 | INFO | ============================================================
+2026-07-15 17:14:10,551 | INFO | Ingestion Complete
+2026-07-15 17:14:10,551 | INFO | ============================================================
