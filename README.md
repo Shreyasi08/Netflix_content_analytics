@@ -1,68 +1,206 @@
-# Netflix Content Analytics
+# 🎬 Netflix Content Analytics Platform
 
-An end-to-end analytics engineering project built using the MovieLens 25M dataset. This project demonstrates a modern data pipeline that ingests raw data into PostgreSQL, transforms it using dbt, and models it into an analytics-ready dimensional warehouse.
+An end-to-end Analytics Engineering project built on the **MovieLens 25M dataset**. This project demonstrates how raw data can be ingested, transformed, modeled, tested, and prepared for analytics using modern data engineering tools and best practices.
 
-## Tech Stack
+---
 
-- Python
-- PostgreSQL
-- dbt (Data Build Tool)
-- SQL
-- Git & GitHub
+## 📌 Project Overview
 
-## Project Architecture
+This project builds a production-style analytics warehouse by implementing:
+
+- Automated Python ETL pipelines
+- PostgreSQL data warehouse
+- dbt transformations
+- Dimensional data modeling
+- Data quality testing
+- Analytics-ready datasets
+
+The goal is to simulate how an Analytics Engineering team would build and maintain a scalable data platform.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Programming | Python |
+| Database | PostgreSQL |
+| Transformation | dbt |
+| Query Language | SQL |
+| Version Control | Git & GitHub |
+
+---
+
+## 🏗️ Architecture
 
 ```
-MovieLens Dataset
-        │
-        ▼
- Python ETL Pipeline
-        │
-        ▼
- PostgreSQL Raw Layer
-        │
-        ▼
-   dbt Staging Models
-        │
-        ▼
-Intermediate Models
-        │
-        ▼
-Dimensional Warehouse
-        │
-        ▼
- Analytics & Reporting
+                MovieLens 25M Dataset
+                        │
+                        ▼
+              Python ETL Pipeline
+                        │
+                        ▼
+          PostgreSQL Raw Data Layer
+                        │
+                        ▼
+              dbt Source Definitions
+                        │
+                        ▼
+               dbt Staging Models
+                        │
+                        ▼
+            Intermediate Transformations
+                        │
+                        ▼
+          Dimensional Data Warehouse
+                        │
+                        ▼
+             Analytics Ready Models
 ```
 
-## Current Progress
+---
 
-- ✅ Python ETL pipeline for MovieLens ingestion
-- ✅ Bulk data loading into PostgreSQL
-- ✅ Raw data warehouse
-- ✅ dbt project configuration
-- ✅ Staging models
-- ✅ Data quality tests
-- ✅ Intermediate transformation models
-- ✅ Dimensional data warehouse
+## 📂 Repository Structure
 
-## Dataset
+```
+Netflix_content_analytics/
 
-This project uses the **MovieLens 25M Dataset** provided by GroupLens Research.
+├── data/
+├── dbt/
+│   ├── models/
+│   │   ├── staging/
+│   │   ├── intermediate/
+│   │   └── marts/
+│   │       ├── dimensions/
+│   │       └── facts/
+│   ├── macros/
+│   ├── snapshots/
+│   ├── tests/
+│   └── dbt_project.yml
+│
+├── ingestion/
+├── infrastructure/
+├── dashboard/
+├── requirements.txt
+└── README.md
+```
 
-Dataset: https://grouplens.org/datasets/movielens/25m/
+---
 
-> Dataset files are excluded from this repository. Download the dataset and place it inside the `data/` directory before running the pipeline.
+# ✅ Completed Features
 
-## Project Status
+### Data Ingestion
 
-🚧 Work in Progress
+- Python ETL pipeline
+- Bulk loading using PostgreSQL `COPY`
+- Logging and error handling
+- Raw data ingestion of **32+ million records**
 
-Upcoming features include:
+---
 
-- Incremental dbt models
-- Airflow orchestration
-- Docker support
+### Raw Data Warehouse
+
+Implemented raw warehouse tables:
+
+- raw_movies
+- raw_ratings
+- raw_tags
+- raw_links
+- raw_genome_scores
+- raw_genome_tags
+
+---
+
+### dbt Models
+
+#### Staging Layer
+
+- stg_movies
+- stg_ratings
+- stg_tags
+- stg_links
+- stg_genome_scores
+- stg_genome_tags
+
+#### Intermediate Layer
+
+- int_movie_genres
+- int_movie_statistics
+- int_user_statistics
+
+#### Dimensional Warehouse
+
+Dimensions
+
+- dim_movie
+- dim_user
+- dim_genre
+
+Facts
+
+- fact_ratings
+- fact_tags
+- fact_genome_scores
+
+Bridge Tables
+
+- bridge_movie_genre
+
+---
+
+## ✅ Data Quality
+
+Implemented dbt tests including:
+
+- Unique tests
+- Not Null tests
+- Relationship tests
+- Accepted Values tests
+
+---
+
+## 📊 Dataset
+
+This project uses the **MovieLens 25M Dataset** published by GroupLens Research.
+
+https://grouplens.org/datasets/movielens/25m/
+
+Dataset files are excluded from this repository.
+
+---
+
+# 🚧 Roadmap
+
+The following features are currently under development:
+
+- dbt Documentation & Lineage
+- Source Freshness
+- Custom Generic Tests
+- Incremental Models
+- Performance Optimization
+- Airflow Orchestration
+- Docker Deployment
 - GitHub Actions CI/CD
-- dbt documentation & lineage
-- Analytics dashboard
-- Production-ready documentation
+- Power BI / Tableau Dashboard
+- Architecture Diagram
+- Production Documentation
+
+---
+
+## 🎯 Learning Objectives
+
+This project demonstrates practical implementation of:
+
+- Analytics Engineering
+- ETL Pipelines
+- PostgreSQL Data Warehousing
+- dbt Transformations
+- Dimensional Modeling
+- Data Quality Testing
+- Production Data Pipelines
+
+---
+
+## 📄 License
+
+This project is intended for educational and portfolio purposes.
